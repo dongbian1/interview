@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     <div class="top">
       <div class="title">个人简介</div>
       <div class="avatar_div">
@@ -23,17 +23,20 @@ export default {
     return {
       pageList: [
         { key: 1, title: 'React 自定义ModalForm组件', path: '/handbook/react/ModalFormItem.html', date: '2022-10-13', author: '陈佳鑫', explain: '一个其貌不扬但是好用得组件。。。' },
-        { key: 1, title: 'VUE 可拖拽排序列表组件', path: '/handbook/vue/DragTable.html', date: '2022-10-17', author: '陈佳鑫', explain: '一个其貌不扬但是好用得组件。。。' }
+        { key: 2, title: 'VUE 可拖拽排序列表组件', path: '/handbook/vue/DragTable.html', date: '2022-10-17', author: '陈佳鑫', explain: '一个其貌不扬但是好用得组件。。。' }
       ]
     }
   }
 }
 </script>
 <style lang="scss" scoped>
+  .index {
+    padding: 10px;
+  }
   .top {
     width: 100%;
     height: 280px;
-    background-image: url(/home_top.jpeg);
+    background-image: url(../public/home_top.jpeg);
     background-size: cover;
     background-attachment: fixed;
     background-position: 0px -300px;

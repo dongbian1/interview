@@ -11,7 +11,7 @@ VUE Element UI Table组件不支持拖拽排序，特编写完成开发需求
 <img class="avatar" :src="$withBase('/DragTable/2.jpg')">
 
 ### template代码块 ###
-```
+``` vue
 <template>
   <div>
     <div class="title">
@@ -41,7 +41,7 @@ VUE Element UI Table组件不支持拖拽排序，特编写完成开发需求
 ```
 
 ### props属性 ###
-```
+```js
 props: {
   data: {
     type: Array,
@@ -55,7 +55,7 @@ props: {
     type: Array,
     default: () => []
   }
-},
+}
 ```
 
 | 属性 | 类型 | 说明 |
@@ -65,7 +65,7 @@ props: {
 | columns | Array | 列表渲染数据 |
 
 ### Columns 属性 ###
-```
+``` js
 columns() {
   return [
     { title: '序号', key: 'lotteryActivityAwardId' },
@@ -76,7 +76,7 @@ columns() {
     { title: '抽取数量', key: 'usedNum' },
     { title: '操作', key: 'action' }
   ]
-},
+}
 ```
 columns计算属性声明
 | 属性 | 类型 | 说明 |
@@ -86,7 +86,7 @@ columns计算属性声明
 | formatter | Function | 对渲染数据进行格式处理 |
 
 ### 完整代码 ###
-```
+```vue
 <template>
   <div>
     <div class="title">
@@ -193,10 +193,10 @@ export default {
   }
 }
 </style>
-```
+``` 
 
 ### DragTable组件 ###
-```
+```vue
 <DragTable v-if="awardsData.length > 0" :columns="columns" :data-key="'awardInfo'" :data="awardsData" @onDrag="onDrag">
   <template #action="{ row, index }">
     <el-button type="text" @click="handleOpenAward(row, index)">编辑</el-button>

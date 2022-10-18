@@ -6,18 +6,17 @@ module.exports = {
   themeConfig: {
     subSidebar: 'auto',
   },
+  markdown: {
+    lineNumbers: true
+  },
   locales: {
     '/': {
       lang: 'zh-CN'
     }
   },
+  plugins: [['vuepress-plugin-code-copy', { successText: '复制成功' }]],
+  sass: { indentedSyntax: true },
   themeConfig: {
-    sass: { indentedSyntax: true },
-    chainWebpack: (config, isServer) => {
-      config.resolveLoader
-          .modules
-          .add(path.resolve(__dirname, './node_modules'))
-    },
     lastUpdated: 'Last Updated',
     nav: [
       { text: "首页", link: "/" },

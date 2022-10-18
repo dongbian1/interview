@@ -8,7 +8,7 @@ date: '2022-10-13'
 <img class="avatar" :src="$withBase('/ModalForm/material.jpg')">
 ## From组件类型创建 ##
 新建文件`modalFormItem.ts`
-```
+``` tsx
 import { Rule } from 'antd/lib/form'
 
 export default interface ModalFormItem {
@@ -38,7 +38,7 @@ export default interface ModalFormItem {
 ## Modal组件 ##
 创建组件文件`OperateModal.tsx`
 ### 创建OperateModal实例 ###
-```
+``` tsx
 import { ModalProps } from 'antd/lib/modal'
 import { FormInstance } from 'antd/lib/form'
 
@@ -63,7 +63,7 @@ interface IOperateModal extends ModalProps {
 
 
 ### 创建OperateModal组件 ###
-```
+``` tsx
 export const OperateModal: React.FC<IOperateModal> = ({
   data,
   type,
@@ -77,7 +77,7 @@ export const OperateModal: React.FC<IOperateModal> = ({
 
 ### Form组件渲染函数 ###
 通过formItem遍历生成相对应组件，特殊组件加入相应业务需求
-```
+``` tsx
 /**
    * 表单渲染
    * @param item 渲染条件
@@ -177,7 +177,7 @@ export const OperateModal: React.FC<IOperateModal> = ({
 ```
 
 ### return函数 ###
-```
+``` tsx
 return (
     <Modal
       {...modalProps}
@@ -213,7 +213,7 @@ return (
 ```
 
 ## 整体OperateModal代码 ##
-```
+``` tsx
 import { baseUrl } from '@/config/config'
 import ModalFormItem from '@/utils/modalFormItem'
 import createRdSession from '@/utils/rdSession'
@@ -498,7 +498,7 @@ OperateModal.defaultProps = {
 ```
 
 ### 组件使用 ###
-```
+``` tsx
 <OperateModal
   title={{ add: '新增客户', update: '修改客户' }[operateModal.type!]}
   data={operateModal.data}
@@ -513,7 +513,7 @@ OperateModal.defaultProps = {
 ```
 
 ### formItem数据 ###
-```
+``` tsx
 const formItem: Array<ModalFormItem> = [
     {
       title: '商户名称',
