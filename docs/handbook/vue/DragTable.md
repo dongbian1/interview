@@ -23,14 +23,15 @@ VUE Element UI Table组件不支持拖拽排序，特编写完成开发需求
       <div
         v-for="(item, index) in data"
         :key="item[rowKey]"
-        draggable
+        :draggable="draggable"
         class="list-item"
         @dragenter="dragenter($event, index)"
         @dragover="dragover($event, index)"
         @dragstart="dragstart(index)"
       >
         <div v-for="columnsItem in columns" :key="columnsItem.key" class="column" :style="{ width: `${100 / columns.length}%` }">
-          <slot :row="item" :name="columnsItem.key" :index="index">
+          <RenderJSX v-if="columnsItem.render" :render-fn="columnsItem.render" :params="item" />
+          <slot v-else :row="item" :name="columnsItem.key" :index="index">
             {{ columnsItem.formatter ? columnsItem.formatter(item) : item[columnsItem.key] }}
           </slot>
         </div>
@@ -43,6 +44,10 @@ VUE Element UI Table组件不支持拖拽排序，特编写完成开发需求
 ### props属性 ###
 ```js
 props: {
+  draggable: {
+    type: Boolean,
+    default: true
+  },
   data: {
     type: Array,
     default: () => []
@@ -60,6 +65,7 @@ props: {
 
 | 属性 | 类型 | 说明 |
 |:-----|:----|:----|
+| draggable | Boolean | 是否可拖动排序 |
 | data | `Array<any>` | 列表数据 |
 | rowKey | String | 每一行key值 |
 | columns | Array | 列表渲染数据 |
@@ -83,7 +89,30 @@ columns计算属性声明
 |:-----|:----|:----|
 | title | string | 列表标题 |
 | key | string | 当前列渲染数据key |
-| formatter | Function | 对渲染数据进行格式处理 |
+| formatter | Function:(row) | row: 当前行数据, 对渲染数据进行格式处理 |
+| render | Function:(row) | row: 当前行数据, 对当前列进行render自定义 |
+
+### RenderJSX ###
+新建文件`RenderJSX.js`
+```js
+import Vue from 'vue'
+
+export default Vue.extend({
+  props: {
+    renderFn: {
+      type: Function,
+      required: true
+    },
+    params: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  render(h) {
+    return this.renderFn(this.params)
+  }
+})
+```
 
 ### 完整代码 ###
 ```vue
@@ -98,14 +127,15 @@ columns计算属性声明
       <div
         v-for="(item, index) in data"
         :key="item[dataKey]"
-        draggable
+        :draggable="draggable"
         class="list-item"
         @dragenter="dragenter($event, index)"
         @dragover="dragover($event, index)"
         @dragstart="dragstart(index)"
       >
         <div v-for="columnsItem in columns" :key="columnsItem.key" class="column" :style="{ width: `${100 / columns.length}%` }">
-          <slot :row="item" :name="columnsItem.key" :index="index">
+          <RenderJSX v-if="columnsItem.render" :render-fn="columnsItem.render" :params="item" />
+          <slot v-else :row="item" :name="columnsItem.key" :index="index">
             {{ columnsItem.formatter ? columnsItem.formatter(item) : item[columnsItem.key] }}
           </slot>
         </div>
@@ -114,10 +144,18 @@ columns计算属性声明
   </div>
 </template>
 <script>
+import RenderJSX from './RenderJSX'
 
 export default {
   name: 'DragTable',
+  components: {
+    RenderJSX
+  },
   props: {
+    draggable: {
+      type: Boolean,
+      default: true
+    },
     /** 表格数据 */
     data: {
       type: Array,

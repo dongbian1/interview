@@ -14,7 +14,7 @@ module.exports = {
       lang: 'zh-CN'
     }
   },
-  plugins: [['vuepress-plugin-code-copy', { successText: '复制成功' }]],
+  plugins: [['vuepress-plugin-code-copy', { successText: '复制成功', align: 'top' }]],
   sass: { indentedSyntax: true },
   themeConfig: {
     lastUpdated: 'Last Updated',
