@@ -89,8 +89,8 @@ columns计算属性声明
 |:-----|:----|:----|
 | title | string | 列表标题 |
 | key | string | 当前列渲染数据key |
-| formatter | Function:(row) | row: 当前行数据, 对渲染数据进行格式处理 |
-| render | Function:(row) | row: 当前行数据, 对当前列进行render自定义 |
+| formatter | Function(row) | row: 当前行数据, 对渲染数据进行格式处理 |
+| render | Function(row) | row: 当前行数据, 对当前列进行render自定义 |
 
 ### RenderJSX ###
 新建文件`RenderJSX.js`
