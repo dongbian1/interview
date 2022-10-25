@@ -5,7 +5,9 @@ date: '2022-10-25'
 ---
 使用VUE CSS动画编写转盘小游戏
 <Turntable />
-
+<br>
+使用css动画`animation: rotate 10s 1 ease-in-out;` 进行DIV旋转10秒内总共旋转10圈旋转方式由慢到快，在由快到慢直至停下，
+点击抽奖获取当前中奖位置，计算旋转停下后位置放入`--prizeAngle`scss变量
 ### 整体代码### 
 ```vue
 <template>
@@ -88,6 +90,7 @@ export default {
       // 计算夹角
       const includedAngle = parseInt(360 / this.prizeList.length);
      
+      // 计算停止后位置
       this.prizeAngle = `rotate(${
         3600 + 360 - (this.calculationAngle(prize) + includedAngle / 2)
       }deg)`;
