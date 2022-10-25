@@ -5,10 +5,13 @@ date: '2022-10-17'
 ---
 
 VUE Element UI Table组件不支持拖拽排序，特编写完成开发需求
-<br/>
-<img class="avatar" :src="$withBase('/DragTable/1.jpg')">
-<br/>
-<img class="avatar" :src="$withBase('/DragTable/2.jpg')">
+
+<DragTable />
+
+::: danger 警告
+#### 因使用md文件编辑当前禁用改变数据方法，如想体验可在vue项目中使用
+:::
+ 
 
 ### template代码块 ###
 ``` vue
