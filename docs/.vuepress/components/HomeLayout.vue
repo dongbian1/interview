@@ -28,7 +28,7 @@ export default {
         { key: 2, title: 'VUE 可拖拽排序列表组件', path: '/handbook/vue/DragTable.html', date: '2022-10-17', author: '陈佳鑫', explain: '因业务需求要对列表进行拖拽排序' },
         { key: 3, title: 'Taro微信小程序无感知登录', path: '/handbook/vue/TaroRequest.html', date: '2022-10-24', author: '陈佳鑫', explain: '针对于微信小程序登录过期后，实现无感知登录，减少用户重新登录' },
         { key: 4, title: 'VUE 转盘抽奖小游戏', path: '/handbook/vue/Turntable.html', date: '2022-10-25', author: '陈佳鑫', explain: '使用CSS动画完成转盘抽奖小游戏' },
-        
+        { key: 5, title: 'VUE 卡牌抽奖小游戏', path: '/handbook/vue/TurnOver.html', date: '2022-10-31', author: '陈佳鑫', explain: '使用CSS动画完成卡牌抽奖小游戏' },
       ]
     }
   }
