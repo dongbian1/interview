@@ -49,7 +49,8 @@ module.exports = {
         children: [
           { title: "可托拽排序列表DragTable", path: "/handbook/vue/DragTable" },
           { title: "Taro开发微信小程序无感知登录", path: "/handbook/vue/TaroRequest" },
-          { title: "vue编写小游戏转盘", path: "/handbook/vue/Turntable" },
+          { title: "转盘抽奖小游戏", path: "/handbook/vue/Turntable" },
+          { title: "卡牌抽奖小游戏", path: "/handbook/vue/TurnOver" },
         ]
       },
       {

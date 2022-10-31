@@ -8,7 +8,7 @@ VUE Element UI Table组件不支持拖拽排序，特编写完成开发需求
 
 <DragTable />
 
-::: danger 警告
+::: danger 提醒
 #### 因使用md文件编辑当前禁用改变数据方法，如想体验可在vue项目中使用
 :::
  
