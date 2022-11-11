@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <div class="top">
-      <div class="title">个人简介</div>
+      <div class="title">码上升天</div>
       <div class="avatar_div">
         <img class="avatar" :src="$withBase('/avatar.jpeg')">
         <div class="test">海賊王になりたい男です</div>
@@ -29,6 +29,7 @@ export default {
         { key: 3, title: 'Taro微信小程序无感知登录', path: '/handbook/vue/TaroRequest.html', date: '2022-10-24', author: '陈佳鑫', explain: '针对于微信小程序登录过期后，实现无感知登录，减少用户重新登录' },
         { key: 4, title: 'VUE 转盘抽奖小游戏', path: '/handbook/vue/Turntable.html', date: '2022-10-25', author: '陈佳鑫', explain: '使用CSS动画完成转盘抽奖小游戏' },
         { key: 5, title: 'VUE 卡牌抽奖小游戏', path: '/handbook/vue/TurnOver.html', date: '2022-10-31', author: '陈佳鑫', explain: '使用CSS动画完成卡牌抽奖小游戏' },
+        { key: 6, title: 'VUE 动态Modal弹出框', path: '/handbook/vue/FlexibleModal.html', date: '2022-11-11', author: '陈佳鑫', explain: '使用Vue.extend注册modal挂载在body上实现任意弹框' },
       ]
     }
   }

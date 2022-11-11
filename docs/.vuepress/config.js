@@ -37,7 +37,7 @@ module.exports = {
       {
         title: "React",
         path: "/handbook/react/ModalFormItem",
-        collapsable: true,
+        collapsable: false,
         children: [
           { title: "自定义ModalForm", path: "/handbook/react/ModalFormItem" },
         ]
@@ -45,12 +45,13 @@ module.exports = {
       {
         title: "VUE",
         path: "/handbook/vue/DragTable",
-        collapsable: true,
+        collapsable: false,
         children: [
           { title: "可托拽排序列表DragTable", path: "/handbook/vue/DragTable" },
           { title: "Taro开发微信小程序无感知登录", path: "/handbook/vue/TaroRequest" },
           { title: "转盘抽奖小游戏", path: "/handbook/vue/Turntable" },
           { title: "卡牌抽奖小游戏", path: "/handbook/vue/TurnOver" },
+          { title: "动态Modal弹出框", path: "/handbook/vue/FlexibleModal" },
         ]
       },
       {

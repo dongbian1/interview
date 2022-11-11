@@ -17,6 +17,8 @@
     "vuepress-theme-reco": "^1.6.16"
   },
   "dependencies": {
+    "@babel/runtime-corejs2": "^7.20.1",
+    "element-ui": "^2.15.10",
     "sass-loader": "^7.3.0",
     "vuepress-plugin-code-copy": "^1.0.6"
   }
