@@ -30,6 +30,7 @@ export default {
         { key: 4, title: 'VUE 转盘抽奖小游戏', path: '/handbook/vue/Turntable.html', date: '2022-10-25', author: '陈佳鑫', explain: '使用CSS动画完成转盘抽奖小游戏' },
         { key: 5, title: 'VUE 卡牌抽奖小游戏', path: '/handbook/vue/TurnOver.html', date: '2022-10-31', author: '陈佳鑫', explain: '使用CSS动画完成卡牌抽奖小游戏' },
         { key: 6, title: 'VUE 动态Modal弹出框', path: '/handbook/vue/FlexibleModal.html', date: '2022-11-11', author: '陈佳鑫', explain: '使用Vue.extend注册modal挂载在body上实现任意弹框' },
+        { key: 7, title: 'React 自定义useModal', path: '/handbook/react/useModal.html', date: '2023-2-7', author: '陈佳鑫', explain: '避免使用modal动态弹出框维护多个变量' },
       ]
     }
   }
@@ -96,5 +97,4 @@ export default {
       }
     }
   }
-
 </style>

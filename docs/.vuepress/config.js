@@ -40,6 +40,7 @@ module.exports = {
         collapsable: false,
         children: [
           { title: "自定义ModalForm", path: "/handbook/react/ModalFormItem" },
+          { title: "自定义useModal", path: "/handbook/react/useModal" },
         ]
       },
       {
