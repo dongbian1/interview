@@ -53,6 +53,7 @@ module.exports = {
           { title: "转盘抽奖小游戏", path: "/handbook/vue/Turntable" },
           { title: "卡牌抽奖小游戏", path: "/handbook/vue/TurnOver" },
           { title: "动态Modal弹出框", path: "/handbook/vue/FlexibleModal" },
+          { title: 'Vue 拖拽编辑界面', path: '/handbook/vue/DragVue' }
         ]
       },
       {
