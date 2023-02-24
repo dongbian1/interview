@@ -35,7 +35,7 @@
             </el-form>
         </div>
 
-        <el-dialog title="添加商品" :visible.sync="show" @close="close">
+        <el-dialog title="添加商品" append-to-body :visible.sync="show" @close="close">
             <el-form label-width="100px">
                 <el-form-item label="选择商品" >
                     <el-select

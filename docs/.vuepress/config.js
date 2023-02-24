@@ -41,6 +41,7 @@ module.exports = {
         children: [
           { title: "自定义ModalForm", path: "/handbook/react/ModalFormItem" },
           { title: "自定义useModal", path: "/handbook/react/useModal" },
+          { title: "自定义DictHook", path: "/handbook/react/DictHooks" },
         ]
       },
       {

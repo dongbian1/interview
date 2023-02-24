@@ -32,6 +32,7 @@ export default {
         { key: 6, title: 'VUE 动态Modal弹出框', path: '/handbook/vue/FlexibleModal.html', date: '2022-11-11', author: '陈佳鑫', explain: '使用Vue.extend注册modal挂载在body上实现任意弹框' },
         { key: 7, title: 'React 自定义useModal', path: '/handbook/react/useModal.html', date: '2023-2-7', author: '陈佳鑫', explain: '避免使用modal动态弹出框维护多个变量' },
         { key: 8, title: 'Vue 拖拽编辑界面', path: '/handbook/vue/DragVue.html', date: '2023-2-13', author: '陈佳鑫', explain: '使用npm vuedraggable 编写一个可自定义拖拽编辑界面dome' },
+        { key: 9, title: 'React 自定义DictHooks', path: '/handbook/react/DictHooks.html', date: '2023-2-22', author: '陈佳鑫', explain: '使字典类型存储在本地避免频繁调用字典接口，只有字典产生更新或者，用户重新登陆' },
       ]
     }
   }
