@@ -8,7 +8,7 @@
     <transition-group name="drag" class="list" tag="div">
       <div
         v-for="(item, index) in data"
-        :key="item[dataKey] + item.rowKey"
+        :key="item[dataKey]"
         :draggable="draggable"
         class="list-item"
         @dragenter="dragenter($event, index)"
@@ -93,7 +93,6 @@ export default {
     word-break: break-word;
     background-color: #e3e3e3;
     color: #515a6e;
-    height: 40px;
     font-size: 13px;
   }
 }

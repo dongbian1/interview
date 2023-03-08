@@ -19,7 +19,7 @@ export default {
           a: 1,
           confirmText: '是否确定新增当前数据？'
         },
-        components: { Com },
+        components: { Com, coma: Com },
         methods: {
           onSubmit: (params) => {
             return new Promise((resolve, reject) => {
@@ -30,12 +30,16 @@ export default {
           }
         }
       }
-      const res = await ModalClass(options)
-      console.log(res)
-      this.$message({
-        message: '新增数据成功~',
-        type: 'success'
-      });
+      try {
+        const res = await ModalClass(options)
+        console.log(res)
+        this.$message({
+          message: '新增数据成功~',
+          type: 'success'
+        });
+      } catch (error) {
+        console.error(error)
+      }
     }
   }
 }

@@ -149,3 +149,11 @@ export default {
 }
 </script>
 ```
+
+### ModalClass Options API ###
+
+| 属性 | 类型 | 说明 |
+|:-----|:----|:----|
+| props | Object | Modal组件入参 |
+| props.confirmText | string | `confirm`确认框，如果传入会在点击确认之后弹出确认框 |
+| component | `ComponentOptions` | 需要在modal中使用的组件，组件会根据传入顺序进行由上而下渲染 |

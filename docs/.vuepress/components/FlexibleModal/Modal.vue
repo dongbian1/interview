@@ -1,7 +1,7 @@
 <template>
   <el-dialog title="提示" :visible.sync="visible" width="30%" @close="handleClose" :before-close="beforeClose">
     <div>这是一段信息</div>
-    <component :is="component" />
+    <component v-for="(name, index) in componentArr" :is="name" :key="index" />
     <span slot="footer" class="dialog-footer">
       <el-button @click="close" :loading="loading">取 消</el-button>
       <el-button type="primary" @click="submit" :loading="loading">确 定</el-button>
@@ -19,25 +19,28 @@ export default {
   data() {
     return {
       visible: true,
-      loading: false
+      loading: false,
+      componentArr: []
     }
   },
   created() {
-    this.component = Object.keys(this.$options.components)[0]
+    this.componentArr = Object.keys(this.$options.components)
   },
   methods: {
     handleClose() {
       this.$emit('close')
     },
     async submit() {
-      await this.$confirm(this.confirmText, '提示', {})
-      this.loading = true
+      let res = null
       try {
-        const res = await this.onSubmit({ data: 1 })
-        console.log(res)
-        this.loading = false
+        if (this.confirmText) return await this.$confirm(this.confirmText, '提示', {})
+        if (this.onSubmit) {
+          this.loading = true
+          res = await this.onSubmit({ data: 1 })
+          this.loading = false
+        }
         this.visible = false
-        this.$emit('submit', '点击确定')
+        this.$emit('submit', res)
       } catch (error) {
         this.loading = false
         return console.error(error)

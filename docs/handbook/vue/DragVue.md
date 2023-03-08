@@ -54,7 +54,7 @@ date: "2023-2-13"
 </section>
 ```
 
-此时我们可以根据当前 div 移动位置进行判断，dragover event 中可以获取到当前 div 在 content 组件中位置`event.target.className`
+此时我们可以根据当前 div 移动位置进行判断，dragover event 中可以获取到当前 div 在 content 组件中位置`event.target.className`。
 我们为主 div 创建了一个 className 为`view-content`, Draggable 组件中 className 为`item`，此时我们可以通过 name 判断当前 div 位置，移动位置为`view-content`时，我们
 可以在`view`数组中插入一条 status 为 2 的占位数据（因为此 div 当前所在位置为组件最底部），当移动位置为`item`说明我们在`view`已经插入过一条数据，此时我们需要判断单曲 div 相对于`item`的高度，
 如果高度小于`item`的一半我们将占位数据插入至`item`之前，如果高度大于一半将数据插入至`item`之后,当拖拽结束时触发`dragEnd`事件，删除掉`view`中 `status`这样就会根据当前组件

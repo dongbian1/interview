@@ -20,7 +20,7 @@ export function ModalClass(options) {
     instance.$once('close', () => {
       instance.$destroy()
       document.body.removeChild(instance.$el)
-      reject()
+      reject('关闭modal框')
     })
   })
 }

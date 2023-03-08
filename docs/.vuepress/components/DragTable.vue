@@ -34,16 +34,18 @@ export default {
         { title: '概率（总和100%）', key: 'winRate', formatter: row => row.winRate != null ? row.winRate / 100 + '%' : '未设置' },
         { title: '总数量', key: 'totalNum' },
         { title: '剩余数量', key: 'num' },
-        { title: '抽取数量', key: 'usedNum' },
+        { title: '抽取数量', key: 'usedNum', render: (row) => {
+          return <div>21312312</div>
+        } },
         { title: '操作', key: 'action' }
       ]
     },
   },
   methods: {
     onDrag(arr) {
-      // this.awardsData = arr.map((item, index) => {
-      //   return { ...item, sortNum: index + 1 }
-      // })
+      this.awardsData = arr.map((item, index) => {
+        return { ...item, sortNum: index + 1 }
+      })
     },
   }
 }
