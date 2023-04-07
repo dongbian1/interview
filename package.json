@@ -13,12 +13,17 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.55.0",
+    "typescript": "^5.0.3",
     "vuepress": "^1.9.7",
+    "vuepress-plugin-typescript": "^0.3.1",
     "vuepress-theme-reco": "^1.6.16"
   },
   "dependencies": {
     "@babel/runtime-corejs2": "^7.20.1",
+    "async-validator": "^1.11.5",
     "element-ui": "^2.15.10",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "sass-loader": "^7.3.0",
     "vuedraggable": "^2.24.3",
     "vuepress-plugin-code-copy": "^1.0.6"

@@ -1,23 +1,25 @@
 module.exports = {
-  title: '码上升天',
-  description: '一个不甘平凡又非常平凡的人',
-  theme: 'reco',
-  base: '/interview/',
+  title: "码上升天",
+  description: "一个不甘平凡又非常平凡的人",
+  theme: "reco",
+  base: "/interview/",
   themeConfig: {
-    subSidebar: 'auto',
+    subSidebar: "auto",
   },
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
   locales: {
-    '/': {
-      lang: 'zh-CN'
-    }
+    "/": {
+      lang: "zh-CN",
+    },
   },
-  plugins: [['vuepress-plugin-code-copy', { successText: '复制成功', align: 'top' }]],
+  plugins: [
+    ["vuepress-plugin-code-copy", { successText: "复制成功", align: "top" }],
+  ],
   sass: { indentedSyntax: true },
   themeConfig: {
-    lastUpdated: 'Last Updated',
+    lastUpdated: "Last Updated",
     nav: [
       { text: "首页", link: "/" },
       // {
@@ -32,7 +34,7 @@ module.exports = {
       {
         title: "博客简介",
         path: "/",
-        collapsable: false,  // 是否折叠
+        collapsable: false, // 是否折叠
       },
       {
         title: "React",
@@ -42,7 +44,7 @@ module.exports = {
           { title: "自定义ModalForm", path: "/handbook/react/ModalFormItem" },
           { title: "自定义useModal", path: "/handbook/react/useModal" },
           { title: "自定义DictHook", path: "/handbook/react/DictHooks" },
-        ]
+        ],
       },
       {
         title: "VUE",
@@ -50,18 +52,22 @@ module.exports = {
         collapsable: false,
         children: [
           { title: "可托拽排序列表DragTable", path: "/handbook/vue/DragTable" },
-          { title: "Taro开发微信小程序无感知登录", path: "/handbook/vue/TaroRequest" },
+          {
+            title: "Taro开发微信小程序无感知登录",
+            path: "/handbook/vue/TaroRequest",
+          },
           { title: "转盘抽奖小游戏", path: "/handbook/vue/Turntable" },
           { title: "卡牌抽奖小游戏", path: "/handbook/vue/TurnOver" },
           { title: "动态Modal弹出框", path: "/handbook/vue/FlexibleModal" },
-          { title: 'Vue 拖拽编辑界面', path: '/handbook/vue/DragVue' }
-        ]
+          { title: "Vue 拖拽编辑界面", path: "/handbook/vue/DragVue" },
+          { title: "批量下载浏览器图片", path: "/handbook/vue/DownloadZip" },
+        ],
       },
       {
         title: "md编写文档",
         path: "/handbook/blog_utils",
-        collapsable: false,  // 是否折叠
-      } 
-    ]
-  }
-}
+        collapsable: false, // 是否折叠
+      },
+    ],
+  },
+};
