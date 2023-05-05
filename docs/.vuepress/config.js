@@ -41,9 +41,10 @@ module.exports = {
         path: "/handbook/react/ModalFormItem",
         collapsable: false,
         children: [
-          { title: "自定义ModalForm", path: "/handbook/react/ModalFormItem" },
+          { title: "根据proTable灵感编写ModalForm组件", path: "/handbook/react/ModalFormItem" },
           { title: "自定义useModal", path: "/handbook/react/useModal" },
           { title: "自定义DictHook", path: "/handbook/react/DictHooks" },
+          { title: "图片查看器", path: "/handbook/react/ImgCheck" },
         ],
       },
       {
