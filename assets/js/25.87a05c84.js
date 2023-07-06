@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{480:function(n,s,t){"use strict";t.r(s);var u=t(3),e=Object(u.a)({},(function(){return(0,this._self._c)("span",[this._v("这是自定义组件")])}),[],!1,null,null,null);s.default=e.exports}}]);
